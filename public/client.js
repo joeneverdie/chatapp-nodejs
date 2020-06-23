@@ -1,6 +1,6 @@
 var socket = io.connect("http://localhost:4200");
 socket.on("connect", function (data) {
-  socket.imit("join", "Hello server from client");
+  socket.emit("join", "Hello server from client");
 });
 socket.on("thread", function (data) {
   $("#thread").append("<li>" + data + "</li>");
